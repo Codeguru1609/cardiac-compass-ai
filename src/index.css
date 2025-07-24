@@ -2,41 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* HeartClutch Design System - Heart Health Themed Colors */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors - Heart Health Theme */
+    --background: 210 20% 98%;
+    --foreground: 210 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Coral/Heart Red */
+    --primary: 14 83% 73%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 14 83% 68%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Calming Teal */
+    --secondary: 174 44% 51%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 174 44% 46%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent - Soft Lavender */
+    --accent: 262 52% 85%;
+    --accent-foreground: 210 15% 20%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted - Light Grey */
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 10% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success - Heart Healthy Green */
+    --success: 142 69% 58%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Warning - Attention Orange */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    /* Destructive - Alert Red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border & Input */
+    --border: 210 20% 88%;
+    --input: 210 20% 93%;
+    --ring: 14 83% 73%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(14 83% 73%), hsl(174 44% 51%));
+    --gradient-secondary: linear-gradient(135deg, hsl(174 44% 51%), hsl(262 52% 85%));
+    --gradient-hero: linear-gradient(135deg, hsl(14 83% 73% / 0.1), hsl(174 44% 51% / 0.1));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(210 20% 70% / 0.15);
+    --shadow-card: 0 2px 12px hsl(210 20% 70% / 0.08);
+    --shadow-elevated: 0 8px 30px hsl(210 20% 70% / 0.12);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +81,60 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Mode - Calming yet Professional */
+    --background: 210 25% 8%;
+    --foreground: 210 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 20% 12%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 20% 12%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary - Softer Coral in Dark */
+    --primary: 14 70% 65%;
+    --primary-foreground: 210 25% 8%;
+    --primary-hover: 14 70% 60%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary - Muted Teal */
+    --secondary: 174 35% 45%;
+    --secondary-foreground: 210 20% 95%;
+    --secondary-hover: 174 35% 40%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Accent - Darker Lavender */
+    --accent: 262 35% 25%;
+    --accent-foreground: 210 20% 95%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Muted - Dark Grey */
+    --muted: 210 20% 18%;
+    --muted-foreground: 210 15% 60%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success - Muted Green */
+    --success: 142 55% 50%;
+    --success-foreground: 210 25% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* Warning - Softer Orange */
+    --warning: 38 80% 55%;
+    --warning-foreground: 210 25% 8%;
+
+    /* Destructive - Muted Red */
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 20% 95%;
+
+    /* Border & Input */
+    --border: 210 20% 20%;
+    --input: 210 20% 15%;
+    --ring: 14 70% 65%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(14 70% 65%), hsl(174 35% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(174 35% 45%), hsl(262 35% 25%));
+    --gradient-hero: linear-gradient(135deg, hsl(14 70% 65% / 0.1), hsl(174 35% 45% / 0.1));
+    
+    /* Dark Shadows */
+    --shadow-soft: 0 4px 20px hsl(210 25% 0% / 0.3);
+    --shadow-card: 0 2px 12px hsl(210 25% 0% / 0.2);
+    --shadow-elevated: 0 8px 30px hsl(210 25% 0% / 0.25);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
